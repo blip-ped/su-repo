@@ -6,7 +6,7 @@ html{
 #head {
     background-image: url(images/header.webp);
     border-radius: 10px;
-    padding: 1vh;          
+    padding: 0px 1px 0px 1px;       
 }
 
 #head ul{
@@ -32,12 +32,14 @@ html{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: relative;  
     overflow: hidden;
+    padding: 0px 1px 0px 1px; 
 }
 
 .media{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0px 1px 0px 1px; 
 }
 
 button{
@@ -62,19 +64,24 @@ video,audio{
 #act {
     border: 1px solid red;
     border-radius: 10px;
+    padding: 0px 1px 0px 1px; 
 }
 
 #act ul{
     display: flex;
-    justify-content: center;   
+    justify-content: space-between;   
     list-style: none;
+    border-radius: 10px;
 }
 
-#act ul img {
-    width: 60%;            
+#act ul li img {
+    width: 50%;            
     height: auto;
     border-radius: 10px;
     transition: all 0.25s;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 #act ul img:hover{
