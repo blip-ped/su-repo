@@ -29,6 +29,16 @@ html{
     position: relative;  
     overflow: hidden;
 }
+.video{
+    display: flex;
+    justify-content: center;
+}
+video{
+    border: solid 1px red;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
 
 #act {
     border: 1px solid red;
