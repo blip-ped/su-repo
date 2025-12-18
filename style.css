@@ -18,7 +18,7 @@ html{
 }
 #head ul li ul{
     display:flex;
-    gap: 10px;
+    gap: 30px;
     list-style: none;
     align-items: center;
 }
@@ -29,15 +29,17 @@ html{
     position: relative;  
     overflow: hidden;
 }
-.video{
+.media{
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
-video{
+video,audio{
     border: solid 1px red;
     height: 100%;
     width: 100%;
     border-radius: 10px;
+    background-image: url(images/header.webp);
 }
 
 #act {
