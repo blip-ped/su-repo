@@ -2,6 +2,7 @@ html{
      background: radial-gradient(circle,#313244,#181825);
      filter: blur(1);
 }
+
 #head {
     background-image: url(images/header.webp);
     border-radius: 10px;
@@ -16,24 +17,40 @@ html{
     color: aliceblue;
     font-family: Arial, Helvetica, sans-serif;   
 }
+
 #head ul li ul{
     display:flex;
     gap: 30px;
     list-style: none;
     align-items: center;
 }
+
 #about{
     background-color: black;
+    border-radius: 10px;
     color: antiquewhite;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: relative;  
     overflow: hidden;
 }
+
 .media{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+button{
+    background-color: #181825;
+    border-radius: 5px;
+    height: 5vh;
+    width: 5vw;
+}
+
+button a{
+    color: aliceblue;
+}
+
 video,audio{
     border: solid 1px red;
     height: 100%;
@@ -44,14 +61,22 @@ video,audio{
 
 #act {
     border: 1px solid red;
+    border-radius: 10px;
 }
+
 #act ul{
     display: flex;
     justify-content: center;   
     list-style: none;
 }
+
 #act ul img {
     width: 60%;            
     height: auto;
     border-radius: 10px;
+    transition: all 0.25s;
+}
+
+#act ul img:hover{
+    transform: scale(1.025);
 }
