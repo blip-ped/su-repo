@@ -1,128 +1,151 @@
-html{
-     background: radial-gradient(circle,#1d202e,#181825);
-     filter: blur(1);
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+
+:root {
+    --bg: #282a36;
+    --curr-line: #44475a;
+    --fg: #f8f8f2;
+    --comment: #6272a4;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+    --orange: #ffb86c;
+    --pink: #ff79c6;
+    --purple: #bd93f9;
+    --red: #ff5555;
+    --yellow: #f1fa8c;
 }
 
-#head, #footer {
-    background-image: url(images/header.gif);
-    border-radius: 10px;
-    padding: 0px 1px 0px 1px;       
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-#head ul{
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'Fira Code', 'Courier New', monospace;
+    line-height: 1.6;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    list-style: none;
-    align-items: center;
-    color: aliceblue;
-    font-family: Arial, Helvetica, sans-serif;   
-}
-
-#footer ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    align-items: center;    
-    color: aliceblue;
-    font-family: Arial, Helvetica, sans-serif;
-    width: auto;
-    height: 50px;
-}
-
-#head ul li ul{
-    display:flex;
-    gap: 30px;
-    list-style: none;
+    justify-content: center;
     align-items: center;
 }
 
-#about{
-    border-radius: 10px;
-    color: antiquewhite;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    position: relative;  
-    overflow: hidden;
-    padding: 0px 1px 0px 1px; 
+.main {
+    width: 90%;
+    max-width: 700px;
+    padding: 2rem;
+    border: 1px solid var(--curr-line); 
 }
 
-.media{
+.head {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--curr-line);
+    padding-bottom: 1rem;
+}
+
+.head::before {
+    content: "user@su-repo:~/subjects $ ls -la";
+    color: var(--green);
+    font-weight: 600;
+    display: block;
+}
+
+.question_bank {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0px 1px 0px 1px; 
+    gap: 0.8rem;
 }
 
-button{
-    background-color: #181825;
-    color: aliceblue;
-    border-radius: 5px;
-    height: 5vh;
-    width: 5vw;
+.question_bank a {
+    display: block;
+    text-decoration: none;
+    color: var(--cyan);
+    padding: 10px 15px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
 }
 
-button a{
-    color: aliceblue;
+.question_bank a::before {
+    content: "> ";
+    color: var(--pink);
+    margin-right: 10px;
+    opacity: 0.7;
 }
 
-button li{
-    color: aliceblue;
+.question_bank a:hover {
+    background-color: var(--curr-line);
+    border-left: 3px solid var(--purple);
+    color: var(--fg);
 }
 
-video{
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-}
-audio{
-    height: 50px;
-    width: auto;
-    border-radius: 10px;
-    background-color: transparent;
-}
-
-#act {
-    border-radius: 10px;
-    padding: 0px 1px 0px 1px; 
-}
-
-#act ul{  
-    list-style: none;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+.foot {
+    margin-top: 2rem;
     text-align: center;
-    gap: 50px;
+    color: var(--comment);
+    font-size: 0.8rem;
+    border-top: 1px dashed var(--curr-line);
+    padding-top: 1rem;
 }
 
-#act ul li{
-    color: aliceblue;
+.foot::after {
+    content: " :) ";
+    font-weight: bold;
 }
 
-#act ul li img {
-    
-    width: 100%;       
-    height: auto;
-    border-radius: 10px;
-    transition: all 0.25s;
-}
-
-#act ul img:hover{
-    transform: scale(1.025);
-}
-
-input{
-    background-color: bisque;
-    border-radius: 5px;
-}
-
-#form{
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 2.5vh;
-    border: wheat dashed 2px;
-    border-radius: 10px;
+body.doc-body {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: aliceblue;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    height: 100vh;
 }
 
+.back-btn {
+    text-decoration: none;
+    color: var(--orange);
+    margin-bottom: 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.back-btn::before {
+    content: "$ cd ..";
+    margin-right: 10px;
+    color: var(--green);
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+    color: var(--yellow);
+}
+
+.pdf-container {
+    flex-grow: 1;
+    width: 100%;
+    border: 1px solid var(--curr-line);
+    background: var(--curr-line);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .main {
+        width: 100%;
+        border: none;
+        padding: 1rem;
+    }
+    
+    body.doc-body {
+        padding: 10px;
+    }
+    
+    .head::before {
+        content: "~/subjects $ ls"; 
+    }
+}

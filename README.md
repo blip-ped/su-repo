@@ -1,2 +1,1 @@
-# web-practice
-Practicing HTML and CSS
+# SU repository (Physics Cycle)
